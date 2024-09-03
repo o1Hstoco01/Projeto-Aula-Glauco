@@ -1,0 +1,23 @@
+{
+  "products":[
+     {
+    "id"      :1,
+    "name"    :"Computador",
+    "price"   : 5000,
+    "category":"Eletronicos"
+  },
+   {
+    "id"      :1,
+    "name"    :"Computador",
+    "price"   : 5000,
+    "category":"Eletronicos"
+  },
+   {
+    "id"      :1,
+    "name"    :"Computador",
+    "price"   : 5000,
+    "category":"Eletronicos"
+  }
+  ]
+
+}
