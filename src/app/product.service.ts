@@ -11,6 +11,10 @@ export class ProductService {
   constructor(private http:HttpClient) { }
 
     getProducts(): Observable<ProductsTable []>{
-        return this.http.get<ProductsTable []>('http://localhost:3000/products')
+        return this.http.get<ProductsTable []>('http://localhost:3000/products');
+    }
+
+    delete(product:ProductsTable): Observable<void>{
+      return this.http.delete<void>('http://localhost:3000/products/' + product.id);
     }
 }
