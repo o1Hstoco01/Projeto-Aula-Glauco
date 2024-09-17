@@ -7,7 +7,13 @@
       "category": "Eletronicos"
     },
     {
-      "id": 1,
+      "id": 2,
+      "name": "Computador",
+      "price": 5000,
+      "category": "Eletronicos"
+    },
+    {
+      "id": 3,
       "name": "Computador",
       "price": 5000,
       "category": "Eletronicos"
