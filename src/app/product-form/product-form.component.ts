@@ -28,5 +28,10 @@ export class ProductFormComponent implements OnInit{
       next: data=> this.formGroupProduct.setValue(data)
     });
   }
+  update(){
+    this.service.update(this.formGroupProduct.value).subscribe({
+      next:() => this.router.navigate(['products'])
+    })
+  }
 
 }
