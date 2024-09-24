@@ -13,8 +13,11 @@ export class ProductService {
     getProducts(): Observable<ProductsTable []>{
         return this.http.get<ProductsTable []>('http://localhost:3000/products');
     }
+    getProductById(id:number): Observable<ProductsTable >{
+      return this.http.get<ProductsTable >('http://localhost:3000/products/' + id);
+  }
 
     delete(product:ProductsTable): Observable<void>{
-      return this.http.delete<void>('http://localhost:3000/products/' + product.id);
+      return this.http.delete<void>('http://localhost:3000/products/' + product.id);  
     }
 }
