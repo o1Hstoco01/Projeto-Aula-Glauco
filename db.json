@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "Computador 1",
+      "name": "Computador 12",
       "price": "5000",
       "category": "Eletronicos"
     },
@@ -17,6 +17,12 @@
       "name": "Computador 3 ",
       "price": "10000",
       "category": "Eletronicos"
+    },
+    {
+      "id": 5,
+      "name": "Mouse Positivo",
+      "price": "12",
+      "category": "Bomba"
     }
   ]
 }

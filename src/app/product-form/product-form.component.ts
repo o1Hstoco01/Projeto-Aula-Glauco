@@ -10,6 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class ProductFormComponent implements OnInit{
   formGroupProduct: FormGroup;
+  isEditing: boolean = false;
   constructor(private router: Router, private activeRoute: ActivatedRoute, private service: ProductService, private formBuilder: FormBuilder){
 
     this.formGroupProduct = formBuilder.group({
@@ -21,7 +22,10 @@ export class ProductFormComponent implements OnInit{
   }
   ngOnInit() {
     const id = Number(this.activeRoute.snapshot.paramMap.get("id"));
-    this.loadProduct(id);
+    if(id != 0){
+      this.isEditing=true;
+      this.loadProduct(id);
+    }
   }
   loadProduct(id: number) {
     this.service.getProductById(id).subscribe({
@@ -33,5 +37,13 @@ export class ProductFormComponent implements OnInit{
       next:() => this.router.navigate(['products'])
     })
   }
+
+  save(){
+    this.service.save(this.formGroupProduct.value).subscribe({
+      next:() => this.router.navigate(['products'])
+    })
+  }
+
+
 
 }
