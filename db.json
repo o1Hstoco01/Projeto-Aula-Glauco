@@ -2,20 +2,20 @@
   "products": [
     {
       "id": 1,
-      "name": "Computador",
-      "price": 5000,
+      "name": "Computador 1",
+      "price": "5000",
       "category": "Eletronicos"
     },
     {
       "id": 2,
-      "name": "Computador",
-      "price": 5000,
+      "name": "Computador 2",
+      "price": "7000",
       "category": "Eletronicos"
     },
     {
       "id": 3,
-      "name": "Computador",
-      "price": 5000,
+      "name": "Computador 3 ",
+      "price": "10000",
       "category": "Eletronicos"
     }
   ]

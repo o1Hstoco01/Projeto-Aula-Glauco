@@ -8,21 +8,27 @@ import { ProductsTable } from './product';
 })
 export class ProductService {
 
+  url='http://localhost:3000/products'
+
   constructor(private http:HttpClient) { }
 
     getProducts(): Observable<ProductsTable []>{
-        return this.http.get<ProductsTable []>('http://localhost:3000/products');
+        return this.http.get<ProductsTable []>(this.url);
     }
     getProductById(id:number): Observable<ProductsTable >{
-      return this.http.get<ProductsTable >('http://localhost:3000/products/' + id);
+      return this.http.get<ProductsTable >(`${this.url}/${id}`);
   }
 
     delete(product:ProductsTable): Observable<void>{
-      return this.http.delete<void>('http://localhost:3000/products/' + product.id);  
+      return this.http.delete<void>(`${this.url}/${product.id}`);  
     }
     
     update(product: ProductsTable):Observable<ProductsTable>{
-      return this.http.put<ProductsTable>('http://localhost:3000/products/' + product.id, product);
+      return this.http.put<ProductsTable>(`${this.url}/${product.id}`, product);
+    }
+
+    save(product: ProductsTable):Observable<ProductsTable>{
+      return this.http.post<ProductsTable>(this.url, product);
     }
 
 }
